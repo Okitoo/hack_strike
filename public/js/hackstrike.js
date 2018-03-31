@@ -1,3 +1,4 @@
+var scene;
 $(document).ready(function(){
 
     var canvas = document.getElementById("renderCanvas"); // Get the canvas element
@@ -13,7 +14,7 @@ $(document).ready(function(){
     var createScene = function () {
 
         // Create the scene space
-        var scene = new BABYLON.Scene(engine);
+        scene = new BABYLON.Scene(engine);
 
         localPlayer = new hPlayer(scene);
 
@@ -59,10 +60,6 @@ $(document).ready(function(){
         if (e.keyCode == 68){
             localPlayer.moveRight(true);
         }
-        //87 w
-        //65 a
-        //68 d
-        //83 s
     });
 
     $(document).keyup(function(e){
@@ -80,10 +77,7 @@ $(document).ready(function(){
         if (e.keyCode == 68){
             localPlayer.moveRight(false);
         }
-        //87 w
-        //65 a
-        //68 d
-        //83 s
     });
 
+    startWS();
 });
